@@ -1,7 +1,4 @@
-import chromadb
-
-client = chromadb.Client()
-collection = client.create_collection(name = "DB_Collection")
+from utils import *
 
 collection.add(
     documents = [

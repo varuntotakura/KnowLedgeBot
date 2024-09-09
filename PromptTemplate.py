@@ -1,15 +1,9 @@
-from langchain_groq import ChatGroq
+from utils import *
 from langchain_core.prompts import ChatPromptTemplate
 import json
 
 with open('credentials.json', 'r') as file:
     data = json.load(file)
-
-llm = ChatGroq(
-    model="llama-3.1-70b-versatile",
-    groq_api_key = data['groq_api'],
-    temperature=0.2
-)
 
 prompt = ChatPromptTemplate.from_messages(
     [
